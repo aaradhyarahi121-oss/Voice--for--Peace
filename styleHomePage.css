@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f8fb;
+    color: #2f4f60;
+}
+#score-box {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #d0e7f5;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #2f4f60;
+}
+
+/* NAV BAR (TOP RIGHT) */
+.nav-bar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.nav-bar a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #4f6d7a;
+    font-weight: 600;
+}
+
+/* MAIN CONTAINER */
+.container {
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+/* MAIN HEADING */
+.main-heading {
+    font-size: 70px;
+    color: #3f5f73;
+    margin-bottom: 5px;
+}
+
+/* SUBTITLE */
+.sub-heading {
+    font-size: 22px;
+    color: #6f8f9b;
+    margin-bottom: 30px;
+}
+
+.slideshow {
+    width: 60%;
+    height: 300px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #eaf4f8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+/* SECTION TITLE (GOALS) */
+.section-title {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #4f6d7a;
+}
+
+/* GOALS */
+.goals {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.goals p {
+    font-size: 18px;
+    margin: 6px 0;
+}
+
+/* LINE */
+.line {
+    width: 60%;
+    margin: 20px auto;
+    border: 1px solid #d0e0ea;
+}
+
+/* POLL */
+.question-box {
+    margin-top: 20px;
+}
+
+/* BUTTONS */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* SOFT BLUE BUTTONS */
+.yes-btn {
+    background-color: #cdeac0;
+}
+
+.no-btn {
+    background-color: #d0e7f5
+}

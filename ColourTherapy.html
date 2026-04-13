@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Therapy</title>
+  <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+
+<div class="card color-theme">
+  <h2>Color Therapy</h2>
+  <p>Click a color</p>
+  <div class="colors">
+    <span onclick="changeBg('#a8e6cf')" style="background:#a8e6cf;"></span>
+    <span onclick="changeBg('#ffd3b6')" style="background:#ffd3b6;"></span>
+    <span onclick="changeBg('#dcedc1')" style="background:#dcedc1;"></span>
+    <span onclick="changeBg('#ffaaa5')" style="background:#ffaaa5;"></span>
+  </div>
+</div>
+
+<script>
+function changeBg(color){
+  document.body.style.background = color;
+}
+</script>
+<a href="BreathingExercise.html">
+  <button>Next</button>
+</a>
+</body>
+</html>

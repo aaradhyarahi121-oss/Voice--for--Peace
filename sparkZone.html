@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firecracker Click Effect</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      position: fixed;
+      top: 20px;
+      width: 100%;
+      font-size: 28px;
+      z-index: 10;
+    }
+
+    .spark {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: explode 0.8s ease-out forwards;
+    }
+
+    @keyframes explode {
+      from {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<h2 id="message" style="position:fixed; bottom:20px; width:100%; text-align:center; color:white;">
+
+</h2>
+  <h1>Click Anywhere You Want 🎆</h1>
+
+ <script>
+  const messages = [
+    "Peace begins with you ✨",
+    "Stay calm and shine 🌟",
+    "Happiness is within 😊",
+    "Keep smiling always 😄",
+    "You are doing great 👍",
+    "Believe in yourself 💪",
+    "Enjoy the moment 🌈",
+    "Spread positivity 💖"
+  ];
+
+  document.addEventListener("click", function(e) {
+
+    // Firecracker effect
+    for (let i = 0; i < 20; i++) {
+      let spark = document.createElement("div");
+      spark.classList.add("spark");
+
+      let colors = ["#ff3c00", "#ffcc00", "#00ffcc", "#ff00ff", "#ffffff"];
+      spark.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+      spark.style.left = e.clientX + "px";
+      spark.style.top = e.clientY + "px";
+
+      let x = (Math.random() - 0.5) * 200 + "px";
+      let y = (Math.random() - 0.5) * 200 + "px";
+
+      spark.style.setProperty("--x", x);
+      spark.style.setProperty("--y", y);
+
+      document.body.appendChild(spark);
+
+      setTimeout(() => {
+        spark.remove();
+      }, 800);
+    }
+
+    // Change message
+    const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("message").innerText = randomMsg;
+
+  });
+</script>
+<a href="PeaceRelease.html">
+  <button>Next</button>
+</a>
+</body>
+</html>

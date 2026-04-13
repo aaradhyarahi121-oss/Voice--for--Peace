@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Peace Wall</h1>
+<p>Click a block and share your message</p>
+
+<div id="wall"></div>
+
+<script>
+let wall = document.getElementById("wall");
+
+for (let i = 0; i < 60; i++) {
+
+    let brick = document.createElement("div");
+    brick.className = "brick";
+
+    let saved = localStorage.getItem("brick-" + i);
+    brick.innerText = saved ? saved : "+";
+
+    brick.onclick = function() {
+        let msg = prompt("Write your message:");
+        if(msg) {
+            brick.innerText = msg;
+            localStorage.setItem("brick-" + i, msg);
+        }
+    };
+
+    wall.appendChild(brick);
+}
+</script>
+<a href="quiz.html">
+  <button>Next</button>
+</a>
+
+</body>
+</html>

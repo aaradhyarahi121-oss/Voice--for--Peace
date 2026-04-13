@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Game</title>
+  <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+
+<div class="card game-theme">
+  <h2>Click Game</h2>
+  <button onclick="increase()">Click Me</button>
+  <p id="count">Clicks: 0</p>
+</div>
+
+<script>
+let count = 0;
+
+function increase(){
+  count++;
+  document.getElementById("count").innerText = "Clicks: " + count;
+}
+</script>
+<a href="Quote.html">
+  <button>Next</button>
+</a>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Peace Quiz</h1>
+
+<div id="quiz-box">
+    <p id="question"></p>
+
+    <button onclick="answer('a')" id="btn1"></button>
+    <button onclick="answer('b')" id="btn2"></button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+let questions = [
+    {
+        q: "Is conflict the only solution?",
+        a: "No",
+        b: "Yes",
+        correct: "a"
+    },
+    {
+        q: "Does communication help solve problems?",
+        a: "Yes",
+        b: "No",
+        correct: "a"
+    },
+    {
+        q: "Is violence a good long-term solution?",
+        a: "No",
+        b: "Yes",
+        correct: "a"
+    },
+    {
+        q: "Can peace bring lasting harmony?",
+        a: "Yes",
+        b: "No",
+        correct: "a"
+    }
+];
+
+let current = 0;
+
+function loadQuestion() {
+    document.getElementById("question").innerText = questions[current].q;
+    document.getElementById("btn1").innerText = questions[current].a;
+    document.getElementById("btn2").innerText = questions[current].b;
+}
+
+function answer(choice) {
+    if(choice === questions[current].correct) {
+        document.getElementById("result").innerText = "Good thinking!";
+    } else {
+        document.getElementById("result").innerText = "Think again—peaceful solutions matter.";
+    }
+
+    current++;
+
+    if(current < questions.length) {
+        setTimeout(() => {
+            document.getElementById("result").innerText = "";
+            loadQuestion();
+        }, 1000);
+    } else {
+        document.getElementById("quiz-box").innerHTML =
+        "<h2>Well done! You completed the quiz 🌿</h2>";
+    }
+}
+
+// load first question
+loadQuestion();
+</script>
+<a href="yoga.html">
+  <button>Next</button>
+</a>
+</body>
+</html>

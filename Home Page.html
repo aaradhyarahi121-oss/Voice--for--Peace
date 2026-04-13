@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voice for Peace</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styleHomePage.css">
+</head>
+<body>
+
+<!-- NAV BUTTONS (TOP RIGHT) -->
+<div class="nav-bar">
+    <a href="about.html">About</a>
+    <a href="conflicts.html">Conflicts</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="interactive.html">Your Voice matters</a>
+    <a href="gallery.html">Gallery</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <h1 class="main-heading">Voice for Peace</h1>
+    <p class="sub-heading">The World of Harmony</p>
+
+    <!-- SLIDESHOW -->
+    <div class="slideshow">
+        <img src="p1.jpg" class="slide active">
+        <img src="p2.png" class="slide">
+        <img src="p3.jpg" class="slide">
+        <img src="p4.jpg" class="slide">
+        <img src="p5.jpg" class="slide">
+        <img src="p6.jpg" class="slide">
+    </div>
+
+    <!-- GOALS -->
+    <h2 class="section-title">Goals</h2>
+
+    <div class="goals">
+        <p>• Making the world peaceful</p>
+        <p>• Say no to violence</p>
+        <p>• Embrace unity and diversity</p>
+    </div>
+
+    <hr class="line">
+
+    <!-- POLL -->
+    <div class="question-box">
+        <p>Do you want to join us?</p>
+        <button onclick="answerYes()" class="yes-btn">Yes</button>
+        <button onclick="answerNo()" class="no-btn">No</button>
+        <p id="response"></p>
+    </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
+
+function answerYes() {
+    document.getElementById("response").innerText =
+    "Peaceful solutions build stronger and lasting harmony.";
+}
+
+function answerNo() {
+    document.getElementById("response").innerText =
+    "You can still spread peace in your own meaningful way.";
+}
+</script>
+<a href="about.html">
+  <button>Next</button>
+</a>
+
+</body>
+</html>

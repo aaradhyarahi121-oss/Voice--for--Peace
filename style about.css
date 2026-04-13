@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient(to bottom, #eef6f9, #f3eefc);
+  font-family: Arial;
+  text-align: center;
+  color: #444;
+}
+
+h1 {
+  color: #7aaecb;
+}
+
+p {
+  max-width: 600px;
+  margin: 15px auto;
+  line-height: 1.6;
+  color: #666;
+}

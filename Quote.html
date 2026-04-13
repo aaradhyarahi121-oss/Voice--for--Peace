@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quote</title>
+  <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+
+<div class="card quote-theme">
+  <h2>Daily Quote</h2>
+  <p id="quote">Click below</p>
+  <button onclick="newQuote()">New Quote</button>
+</div>
+
+<script>
+const quotes = [
+"Peace begins with a smile",
+"Stay calm and breathe",
+"You are stronger than you think",
+"Choose peace over stress"
+];
+
+function newQuote(){
+  let r = Math.floor(Math.random()*quotes.length);
+  document.getElementById("quote").innerText = quotes[r];
+}
+</script>
+<a href="sparkZone.html">
+  <button>Next</button>
+</a>
+</body>
+</html>

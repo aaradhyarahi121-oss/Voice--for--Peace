@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Let It Go</title>
+</head>
+
+<body>
+
+<h1>Let It Go 🌿</h1>
+
+<input type="text" id="inputBox" placeholder="Type your worries here...">
+<br><br>
+<button onclick="release()">Let Go</button>
+
+<script>
+function release() {
+  let text = document.getElementById("inputBox").value;
+
+  if (text === "") return;
+
+  let msg = document.createElement("div");
+  msg.innerText = text;
+
+  msg.style.position = "absolute";
+  msg.style.left = Math.random() * window.innerWidth + "px";
+  msg.style.top = window.innerHeight + "px";
+  msg.style.fontSize = "18px";
+
+  document.body.appendChild(msg);
+
+  // Move upward (like letting go)
+  let move = setInterval(() => {
+    msg.style.top = (msg.offsetTop - 2) + "px";
+  }, 20);
+
+  // Remove after some time
+  setTimeout(() => {
+    msg.remove();
+    clearInterval(move);
+  }, 4000);
+
+  // Clear input
+  document.getElementById("inputBox").value = "";
+}
+</script>
+<a href="interactive.html">
+  <button>Next</button>
+</a>
+</body>
+</html>

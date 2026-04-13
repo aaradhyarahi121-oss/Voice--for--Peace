@@ -1,0 +1,107 @@
+body {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    background: #f4f8fb;
+    margin: 0;
+
+    /* smooth fade-in */
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* HEADING */
+.main-heading {
+    font-size: 52px;
+    color: #6F8F9B;
+    margin-top: 25px;
+}
+
+/* SUBTITLE */
+.sub-heading {
+    font-size: 20px;
+    color: #8aaeb5;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* FLOW CONTAINER */
+.flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* FLOW ITEMS */
+.flow-item {
+    width: 60%;
+    padding: 15px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #e3f0f7, #e4f3ec);
+    color: #4a6c74;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+/* HOVER LINE EFFECT */
+.flow-item::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    margin: 5px auto 0;
+    background: #6F8F9B;
+    transition: 0.4s;
+}
+
+.flow-item:hover::after {
+    width: 80%;
+}
+
+.flow-item:hover {
+    transform: scale(1.05);
+}
+
+/* PLEDGE BOX */
+.pledge-box {
+    margin: 60px 20px;
+    padding: 30px;
+    background: #eaf4f8;
+    border-radius: 20px;
+}
+
+/* PLEDGE TEXT */
+.pledge-text {
+    font-size: 18px;
+    color: #4a6c74;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* BUTTON */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #cdeac0;
+    color: #3d5c3a;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* THANK YOU MESSAGE */
+#thankyou-msg {
+    margin-top: 15px;
+    color: #5f7f8a;
+    font-weight: 500;
+}
